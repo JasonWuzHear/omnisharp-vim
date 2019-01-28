@@ -61,7 +61,7 @@ function! OmniSharp#util#get_start_cmd(solution_file) abort
     elseif s:is_cygwin()
       let prefix = '^/cygdrive/'
     else
-      let prefix = '^/mnt/'
+      let prefix = '^/'
     endif
     let solution_path = substitute(solution_path, prefix.'\([a-zA-Z]\)/', '\u\1:\\', '')
     let solution_path = substitute(solution_path, '/', '\\', 'g')
