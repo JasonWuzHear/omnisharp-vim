@@ -171,7 +171,7 @@ def formatPathForClient(ctx, filepath):
             elif ctx.is_cygwin:
                 prefix = '/cygdrive/{0}/'
             else:
-                prefix = '/mnt/{0}/'
+                prefix = '/{0}/'
             return prefix.format(matchobj.group(1).lower())
         return re.sub(r'^([a-zA-Z]):\\', path_replace, filepath).replace('\\', '/')
     # Shorten path names by checking if we can make them relative
