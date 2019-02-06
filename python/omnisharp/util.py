@@ -158,7 +158,7 @@ def formatPathForServer(ctx, filepath):
         elif ctx.is_cygwin:
             pattern = r'^/cygdrive/([a-zA-Z])/'
         else:
-            pattern = r'^/mnt/([a-zA-Z])/'
+            pattern = r'^/([a-zA-Z])/'
         return re.sub(pattern, r'\1:\\', filepath).replace('/', '\\')
     return filepath
 
